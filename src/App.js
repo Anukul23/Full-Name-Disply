@@ -10,7 +10,7 @@ function App() {
 
   const handleformsubmit = (event)=>{
     event.preventDefault();
-    setfullName(`Full Nmae : ${firstName} ${lastName}`)
+    setfullName(`Full Name : ${firstName} ${lastName}`)
   }
 
   const handlefirstName = (event)=>{
