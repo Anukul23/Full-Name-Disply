@@ -8,7 +8,8 @@ function App() {
   const [lastName , setlastName] = useState ("");
   const [fullName , setfullName] = useState("");
 
-  const handleformsubmit = ()=>{
+  const handleformsubmit = (event)=>{
+    event.preventDefault();
     setfullName(`Full Nmae : ${firstName} ${lastName}`)
   }
 
@@ -25,11 +26,11 @@ function App() {
         <h1>Full Name Display</h1>
         <form onSubmit={handleformsubmit}>
          <label> First Name : </label>
-        <input type='text'  onChange={handlefirstName} required />
+        <input type='text' value={firstName} onChange={handlefirstName} required />
         <br />
         <br/>
         <label>Last Name : </label>
-        <input type='text'  onChange={handlelastName} required />
+        <input type='text' value={lastName}  onChange={handlelastName} required />
         <br />
         <br/>
         <button type='submit'>Submit</button>
